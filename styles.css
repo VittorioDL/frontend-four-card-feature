@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    /* TYPOGRAPHY */
+    --font-family: 'Poppins', sans-serif; 
+    --font-size: 15px;
+    --fw-200: 200;
+    --fw-400: 400;
+    --fw-700: 700;
+
+    /* BORDER COLORS  */
+    --bd-red: hsl(0, 78%, 62%);
+    --bd-cyan: hsl(180, 62%, 55%);
+    --bd-orange: hsl(34, 97%, 64%);
+    --bd-blue: hsl(212, 86%, 64%);
+
+    /* TEXT COLORS */
+    --clr-heading: hsl(234, 12%, 34%);
+    --clr-p: hsl(229, 6%, 66%);
+    --main-bg: hsl(0, 0%, 98%);
+    --card-bg: #fff;
+}
+
+html, body{
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+}
+.container{
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: var(--main-bg);
+}
+
+.title{
+    margin: 4em auto 3rem auto;
+    padding-inline: 1rem;
+    max-width: 630px;
+}
+.heading{
+    text-align: center;
+    font-size: 2.7rem;
+}
+.title p{
+    font-size: 1.125rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--clr-p);
+}
+
+.light{
+    color: var(--clr-heading);
+    font-weight: var(--fw-200);
+}
+.dark{
+    color: var(--clr-heading);
+    font-weight: var(--fw-700);
+}
+
+/* CARDS STYLING */
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.center-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card{
+    max-width: 390px;
+    background-color: var(--card-bg);
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 8px 10px 3px rgb(216, 224, 234);
+    margin: 1rem;
+    padding: 2rem 2.2rem;
+    border-radius: 5px;
+}
+
+.bd-cyan{border-top: 4px solid var(--bd-cyan);}
+.bd-red{border-top: 4px solid var(--bd-red);}
+.bd-orange{border-top: 4px solid var(--bd-orange);}
+.bd-blue{border-top: 4px solid var(--bd-blue);}
+
+.card-title{
+    color: var(--clr-heading);
+    font-weight: var(--fw-700);
+    margin-bottom: 0.7rem;
+}
+.card-text{
+    color: var(--clr-p);
+    line-height: 1.8rem;
+}
+.card-img{
+    margin-top: 3rem;
+    float: right;
+}
+
+@media (max-width: 1000px) {
+    .card-container,
+    .center-column{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 530px) {
+    .heading{
+        font-size: 1.85rem;
+    }
+    .title p{
+        font-size: 1.1rem;
+    }
+
+}
