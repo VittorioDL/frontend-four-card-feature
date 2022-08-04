@@ -24,6 +24,7 @@
 html, body{
     font-size: var(--font-size);
     font-family: var(--font-family);
+    background-color: var(--main-bg);
 }
 .container{
     min-width: 100%;
